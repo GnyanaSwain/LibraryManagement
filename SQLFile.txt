@@ -1,0 +1,49 @@
+create database library;
+use library;
+
+
+create table books(
+BookID varchar(20) not null,
+BookName varchar(50) not null,
+Author varchar(20) not null,
+Stream varchar(10) not null,
+Class varchar(10) not null,
+Available varchar(10) not null);
+select * from books;
+
+create table student(
+StudentId varchar(20) not null,
+StudentName varchar(30) not null,
+SStream varchar(20) not null,
+SClass varchar(10) not null,
+Address varchar(100) not null);
+
+select * from student;
+
+select * from books where BookId='A105';
+
+
+create table issue(
+StudentId varchar(20) not null,
+StudentName varchar(20) not null,
+BookId varchar(50) not null,
+BookName varchar(20) not null,
+Address varchar(50) not null,
+IssueDate varchar(10) not null,
+stream varchar(20) not null,
+class varchar(20) not null);
+
+
+select * from student;
+select * from issue;
+
+
+create table returndetail(
+StudentId varchar(20) not null,
+StudentName varchar(20) not null,
+BookId varchar(50) not null,
+BookName varchar(20) not null,
+IssueDate varchar(10) not null,
+ReturnDate varchar(10) not null);
+
+select * from returndetail;
